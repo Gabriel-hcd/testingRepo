@@ -1,0 +1,50 @@
+package FirstPackage;
+import java.util.*;
+
+import OpertaionsPackage.sumNumbers;
+import OpertaionsPackage.restNumbers;
+
+public class mainCalculator{
+	
+	public static void main(String args[]) {
+		
+	}
+	
+	public static void menu() {
+		System.out.println("Elige una operacion");
+		System.out.println("1.- Suma \n 2.- Resta \n 3.- Multiplicacion \n 4.- Division");
+		Scanner operacion = new Scanner(System.in);
+		int operation = operacion.nextInt();
+		String SelectedOperation;
+		switch(operation){
+			case 1: SelectedOperation = "Suma";
+				suma();
+					break;
+					
+			case 2: SelectedOperation = "Resta";
+				resta();
+					break;
+			
+			case 3: SelectedOperation = "Multiplicacion";
+				break;
+			case 4: SelectedOperation = "Division";
+		}
+	}
+	
+	public static void suma(){
+		Scanner num = new Scanner(System.in);
+		int num1, num2;
+		num1 = num.nextInt();
+		num2 = num.nextInt();
+		
+		System.out.println(sumNumbers.sumarNumeros(num1, num2));
+	}
+	public static void resta() {
+		Scanner num = new Scanner(System.in);
+		int num1, num2;
+		num1 = num.nextInt();
+		num2 = num.nextInt();
+		
+		System.out.println(restNumbers.restarNumeros(num1, num2));
+	}
+}

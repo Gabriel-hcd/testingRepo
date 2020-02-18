@@ -1,0 +1,15 @@
+package FirstPackage;
+import java.util.*;
+
+import OpertaionsPackage.sumNumbers;
+
+public class mainCalculator{
+	public static void main(String args[]) {
+		Scanner num = new Scanner(System.in);
+		int num1, num2;
+		num1 = num.nextInt();
+		num2 =num.nextInt();
+		
+		System.out.println(sumNumbers.sumarNumeros(num1, num2));
+	}
+}
